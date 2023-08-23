@@ -16,7 +16,7 @@ class TrainSeeder extends Seeder
     {
         $new_train = new Train();
 
-        $new_train->agency_name = $faker->words(1, true);
+        $new_train->agency_name = $faker->word();
         $new_train->from_station = $faker->words(2, true);
         $new_train->to_station = $faker->words(2, true);
         $new_train->departure_time = $faker->time();

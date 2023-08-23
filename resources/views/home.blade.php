@@ -26,9 +26,18 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Train Number: {{ $train->train_number }}</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.
-                                </p>
+                                <span class="card-text">Orario di partenza: {{ $train->getDepartureTime() }}</span>
+                                <p class="card-text">Da: {{ $train->from_station }}</p>
+                                <span class="card-text">Orario di arrivo: {{ $train->getArrivalTime() }}</span>
+                                <p class="card-text">A: {{ $train->to_station }}</p>
+
+                                @if ($train->cancelled)
+                                    <p>&cross; Treno soppresso. Auguri</p>
+                                @elseif ($train->delay)
+                                    <p>&check; Come al solito il treno è in ritardo!</p>
+                                @else
+                                    <p>Treno in orario! </p>
+                                @endif
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>

@@ -38,7 +38,8 @@
                                 @else
                                     <p>Treno in orario! </p>
                                 @endif
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-primary">Go
+                                    somewhere, you should try me! :)</a>
                             </div>
                         </div>
                     </div>
